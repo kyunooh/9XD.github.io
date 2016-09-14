@@ -1,23 +1,343 @@
 ---
-layout: default
+layout: blog
+title: index
+permalink: /
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="navbar-wrapper" xmlns="http://www.w3.org/1999/html">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+                        <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">{{ site.landing.home }}</span></a></li>
+                        <li><a class="page-scroll" href="#meetup"><span data-i18n="nav.meetup">{{ site.landing.meetup }}</span></a></li>
+                        <li><a class="page-scroll" href="#project"><span data-i18n="nav.projects">{{ site.landing.projects }}</span></a></li>
+                        <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">{{ site.landing.blog }}</span></a></li>
+                        <li><a class="page-scroll" href="#contact"><span data-i18n="nav.contact">{{ site.landing.contact }}</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 </div>
+
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+        <li data-target="#inSlider" data-slide-to="2"></li>
+        <li data-target="#inSlider" data-slide-to="3"></li>
+        <li data-target="#inSlider" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image wow zoomIn">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back three"></div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back four"></div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back five"></div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<section id="about" class="features container-fluid">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+            <p>커뮤니티 활동의 첫 단추,</p>
+            <p>또래 개발자를 만날 수 있는 이곳은</p>
+            <p><a href="https://www.facebook.com/groups/1565641083693087/">9X년생 개발자 모임</a>입니다.</p>
+        </div>
+    </div>
+</section>
+<section id="meetup" class="timeline features gray-section">
+    <div class="container" id="i18_meetup">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="meetup.meetup">Meet Up</span></h1>
+            </div>
+        </div>
+        <div class="row features-block">
+
+            <div class="col-lg-12">
+                <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
+                    <!-- nextcode -->
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-plus-square"></i>
+                        </div>
+                        <div class="vertical-timeline-content">
+                            <h2><span data-i18n="meetup.nextcode">앞으로...</span></h2>
+                            <p><span data-i18n="meetup.nextcode_des">앞으로도 9X년생 개발자 모임은 지금까지 처럼 개발자들의 소통을 위해 노력할 것이며, 네트워킹 밋업을 주최하는 것 외에도 다른 방법으로, 9X년생 개발자들의 교류를 이끌어 낼 생각입니다.</span></p>
+                            <span class="vertical-date"><span data-i18n="meetup.nextcode_date"> May. 2016 ~ </span><br/> <small><span data-i18n="meetup.next_code_title">앞으로...</span></small> </span>
+                        </div>
+                    </div>
+                    <!-- netease game -->
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-gamepad"></i>
+                        </div>
+                        <div class="vertical-timeline-content">
+                            <h2><span data-i18n="meetup.second_meetup">두번째, 세번째 9X년생 개발자 모임</span></h2>
+                            <p><span data-i18n="meetup.second_meetup_des">4월 7일 구글 캠퍼스에서 두번째 모임을 열었으며, 5월 27일에는 D2 Start Up Factory에서 세번째 모임을 하였습니다. 특히 세번째 모임에서는 더 많은 참석자와 후원들로, 규모가 커진 더욱 풍성한 모임이 되었습니다.</span></p>
+                            <span class="vertical-date"><span data-i18n="meetup.second_meetup_date"> Apr ~ June. 2016</span><br/> <small><span data-i18n="meetup.second_meetup_title">지속적인 모임</span></small> </span>
+                        </div>
+                    </div>
+                    <!-- creating group -->
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-plus-square"></i>
+                        </div>
+                        <div class="vertical-timeline-content">
+                            <h2><span data-i18n="meetup.creating">페이스북 그룹 생성</span></h2>
+                            <p><span data-i18n="meetup.creating_des">3월 6일 처음으로 페이스북에 9X년생 개발자 모임이 만들어졌고, 현재는 1500명이 넘는 그룹이 되었습니다.</span></p>
+                            <span class="vertical-date"><span data-i18n="meetup.creating_des"> Mar. 2016 </span><br/> <small><span data-i18n="meetup.creating_title">그룹 생성</span></small> </span>
+                        </div>
+                    </div>
+                    <!-- first meetup -->
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="vertical-timeline-content">
+                            <h2><span data-i18n="meetup.first_meetup">9X년생 개발자 & 디자이너 모임</span></h2>
+                            <p><span data-i18n="meetup.first_meetup_des">1월 15일 구글 캠퍼스에서 9X년생 개발자와 디자이너 함께 모여 첫 모임을 하였습니다.</span></p>
+                            <span class="vertical-date"><span data-i18n="meetup.first_meetup_date"> Jan. 2016 </span><br/> <small><span data-i18n="meetup.first_meetup_title">첫 모임</span></small> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section id="project" class="project features">
+    <div class="container" id="i18_projects">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="projects.our_projects">9XD에 오면</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 wow fadeInLeft">
+                <div class="team-member">
+                    <img src="{{ site.project.meetup.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">{{ site.project.meetup.name }}</span></h4>
+                    <p><span data-i18n="projects.meetup">자극이 되는 건 유명한 사람이 아닌 함께 성장해가는 또래입니다. 한 달에 한 번씩 또래 개발자와 이야기를 나누는 정기 밋업을 가집니다.</span></p>
+                </div>
+            </div>
+
+            <div class="col-sm-4 wow">
+                <div class="team-member">
+                    <img src="{{ site.project.blog.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">{{ site.project.blog.name }}</span></h4>
+                    <p><span data-i18n="projects.blog">9XD의 새로운 소식들과 또래 개발자 인터뷰가 올라갑니다.</span></p>
+                </div>
+            </div>
+
+            <div class="col-sm-4 wow fadeInRight">
+                <div class="team-member">
+                    <img src="{{ site.project.undefined.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">{{ site.project.undefined.name }}</span></h4>
+                    <p><span data-i18n="projects.undefined">해커톤, 미니 컨퍼런스 등 시작하는 개발자들이 함께 성장할 수 있는 새로운 이벤트를 준비하고 있습니다.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</section>
+
+<section id="blog" class="navy-section testimonials" style="margin-top: 0">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center wow zoomIn" id="i18_blog">
+                <br><br><br><br>
+                <a class="btn btn-lg btn-default btn-rounded btn-outline" href="/blog/"><span data-i18n="blog.our_blog">블로그</span></a>
+                <br><br><br><br>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact" class="contact features">
+    <div class="container" id="i18_contact">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="contact.contact_us">함께해요</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center fadeInLeft">
+                <a href="mailto:{{ site.author.email }}" class="btn btn-primary"><span data-i18n="contact.email">메일 보내기</span></a>
+                <p class="m-t-sm"><span data-i18n="contact.follow">
+                    그리고 9XD를 도와주시고 싶은 분들이나 질문사항이 있는 분들은 메일을 보내주시기 바랍니다.
+                </span></p>
+                <ul class="list-inline social-icon">
+                    <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p><strong>&copy; 2016 {{ site.title }}</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 80
+        });
+
+        // Page scrolling feature
+        $('a.page-scroll').bind('click', function(event) {
+            var link = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(link.attr('href')).offset().top - 50
+            }, 500);
+            event.preventDefault();
+            $("#navbar").collapse('hide');
+        });
+    });
+
+    var cbpAnimatedHeader = (function() {
+        var docElem = document.documentElement,
+                header = document.querySelector( '.navbar-default' ),
+                didScroll = false,
+                changeHeaderOn = 200;
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 );
+                }
+            }, false );
+        }
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                $(header).addClass('navbar-scroll')
+            }
+            else {
+                $(header).removeClass('navbar-scroll')
+            }
+            didScroll = false;
+        }
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+        init();
+
+    })();
+
+    // Activate WOW.js plugin for animation on scrol
+    new WOW().init();
+
+</script>
+
+<script>
+    $(document).ready(function (){
+        $.i18n.init({
+            resGetPath: 'static/locales/__lng__.json',
+            load: 'unspecific',
+            fallbackLng: false,
+            lng: 'kr'
+        }, function (t){
+            $('.i18container').i18n();
+            // $('#i18_title').i18n();
+            $('#i18_navbar').i18n();
+            $('#i18_about_us').i18n();
+            $('#i18_skills').i18n();
+            $('#i18_projects').i18n();
+            $('#i18_meetup').i18n();
+            $('#i18_blog').i18n();
+            $('#i18_contact').i18n();
+        });
+
+        $('.set_kr').on('click', function (){
+            i18n.setLng('kr', function(){
+                $('.i18container').i18n();
+                // $('#i18_title').i18n();
+                $('#i18_navbar').i18n();
+                $('#i18_about_us').i18n();
+                $('#i18_skills').i18n();
+                $('#i18_projects').i18n();
+                $('#i18_meetup').i18n();
+                $('#i18_blog').i18n();
+                $('#i18_contact').i18n();
+
+                // $('.set_en').addClass('active');
+                // $('.set_cn').removeClass('active');
+            });
+        });
+
+    });
+
+</script>
